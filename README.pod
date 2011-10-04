@@ -1,0 +1,35 @@
+
+=head1 Beginning Perl
+
+In this git repository are several examples and documents demonstrating common use of perl within TGI,
+though probably moreso in the APIPE and Systems teams.  The LIMS group makes use of a different
+object-relation mapper and their styles differ for that reason.
+
+=head1 The Perl Interpreter
+
+Which one are we using?
+
+ * /usr/bin/perl
+ * /gsc/bin/perl
+ * perl 5.10.1
+ * perl 5.12.x
+ * perl 5.14.y
+ * some other perl
+
+=head1 Object Oriented Perl
+
+Object oriented programming offers a means of abstraction that allows for better reuse of code.
+
+=head1 Unit Testing
+
+=head1 Command Line Option Parsing
+
+=head1 POD Documentation
+
+=head1 Debian Packaging
+
+=head1 References
+
+http://www.perl.com/pub/2001/11/07/ooperl.html
+
+=cut
