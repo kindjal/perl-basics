@@ -9,12 +9,35 @@ object-relation mapper and their styles differ for that reason.
 
 Which one are we using?
 
- * /usr/bin/perl
- * /gsc/bin/perl
- * perl 5.10.1
- * perl 5.12.x
- * perl 5.14.y
- * some other perl
+ * /usr/bin/perl      The perl on the local host
+ * /gsc/bin/perl      The perl on the TGI appserver
+ * /usr/bin/env perl  What the environment returns from PATH
+ * some other perl    Maybe from perlbrew or something else
+
+=head1 Building Applications
+
+We commonly use Build.PL like this:
+
+ * /usr/bin/perl Build.PL
+ * ./Build
+ * ./Build test
+
+These steps happen automatically when one builds a debian package, assuming there is a ./debian directory.
+To build a package, run:
+
+ * dpkg-buildpackage
+
+Which produces the files:
+
+  ../packagename_0.01-1.dsc
+  ../packagename_0.01-1.tar.gz
+  ../packagename_0.01-1_all.deb
+  ../packagename_0.01-1_amd64.changes
+
+Inspect them via:
+
+  dpkg -c ../packagename_0.01-1_all.deb # See files in the package
+  dpkg -I ../packagename_0.01-1_all.deb # See metadata about the package
 
 =head1 Object Oriented Perl
 
