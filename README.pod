@@ -5,6 +5,14 @@ In this git repository are several examples and documents demonstrating common u
 though probably moreso in the APIPE and Systems teams.  The LIMS group makes use of a different
 object-relation mapper and their styles differ for that reason.
 
+I am hoping that these files will provide a good framework for producing perl applications that:
+
+ * Are object oriented in style
+ * Make use of Module::Build (ie. Build.PL)
+ * Include unit tests
+ * Include debian packaging
+ * Demonstrate some common things like parsing command line options
+
 =head1 The Perl Interpreter
 
 Which one are we using?
