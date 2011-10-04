@@ -1,0 +1,14 @@
+# This manifest was made by running
+# /usr/bin/perl Build.PL
+# ./Build manifest
+bin/application.pl
+Build.PL
+debian/changelog
+debian/compat
+debian/control
+debian/copyright
+debian/preinst
+debian/rules
+lib/Application.pm
+MANIFEST			This list of files
+README.pod
