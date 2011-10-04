@@ -1,0 +1,12 @@
+#!/bin/sh
+
+GROUPNAME=nogroup
+USERNAME=nobody
+HOMEDIR=/var/empty
+
+getent group $GROUPNAME >/dev/null || groupadd -r $GROUPNAME
+getent passwd $USERNAME >/dev/null || \
+    useradd -r -g $GROUPNAME -d $HOMEDIR -s /sbin/nologin \
+    -c "Useful comment about the purpose of this account" $USERNAME
+exit 0
+# NB: We never remove users or groups created by packages. There's no sane way to check if files owned by those users/groups are left behind (and even if there would, what would we do to them?), and leaving those behind with ownerships pointing to now nonexistent users/groups may result in security issues when a semantically unrelated user/group is created later and reuses the UID/GID. Also, in some setups deleting the user/group might not be possible or/nor desirable (eg. when using a shared remote user/group database). Cleanup of unused users/groups is left to the system administrators to take care of if they so desire.

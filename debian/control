@@ -1,0 +1,14 @@
+Source: packagename
+Section: perl
+Priority: optional
+Build-Depends: debhelper (>= 7)
+Build-Depends-Indep: perl (>= 5.9.5)
+Maintainer: Matthew Callaway <mcallawa@genome.wustl.edu>
+Standards-Version: 3.8.3
+Homepage: http://cpan.gsc.wustl.edu/cpan/Application/
+
+Package: packagename
+Architecture: all
+Depends: ${perl:Depends}, ${misc:Depends}, perl (>= 5.9.5)
+Description: Perl example application
+ This is a decription block for Perl example applicaiton.
