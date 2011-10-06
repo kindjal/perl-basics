@@ -22,6 +22,9 @@ Which one are we using?
  * /usr/bin/env perl  What the environment returns from PATH
  * some other perl    Maybe from perlbrew or something else
 
+It is important to note which interpreter you are using because this determines the list of available modules,
+as well as 32 or 64 bitness.
+
 =head1 Building Applications
 
 We commonly use Build.PL like this:
@@ -53,14 +56,28 @@ Object oriented programming offers a means of abstraction that allows for better
 
 =head1 Unit Testing
 
+Tests go in ./t.  Instantiate objects from your modules and test each method.
+
 =head1 Command Line Option Parsing
+
+Use Getopt::Std, Getopt::Long, or Getopt::Complete.  See the man pages for each.
 
 =head1 POD Documentation
 
+Write docs!
+
 =head1 Debian Packaging
+
+Packaging instructions are in the ./debian directory.
+
+ * http://www.debian.org/doc/manuals/maint-guide/
+ * http://www.debian.org/doc/manuals/maint-guide/dreq.en.html
+
+We want to leverage packagers in order to control dependency trees and prevent the later
+questions "Why is this installed?" and "Who is using this?"
 
 =head1 References
 
-http://www.perl.com/pub/2001/11/07/ooperl.html
+ * http://www.perl.com/pub/2001/11/07/ooperl.html
 
 =cut
