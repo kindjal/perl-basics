@@ -23,17 +23,11 @@ sub method {
 }
 
 sub attr1 {
-    # This method returns the value of attr1
-    my $self = shift;
-    return $self->{attr1};
-}
-
-sub set_attr1 {
-    # This method lets you set the value of attr1
+    # This method returns the value of attr1 or sets the value of attr1
     my $self = shift;
     my $new_value = shift;
-    $self->{attr1} = $new_value;
-    return $self->attr1();
+    $self->{attr1} = $new_value if (defined $new_value);
+    return $self->{attr1};
 }
 
 sub usage {
