@@ -24,7 +24,11 @@ use Application;
 
 my $app = Application->new();
 
-ok( $app->{attr1} == 1, "app has attr1 = 1" );
+# check the value of attr1 using the accessor
+ok( $app->attr1() == 1, "app has attr1 = 1" );
+
+# check the value of attr2 by accessing the object hash directly
+# (usually considered bad practice) since all hash properties lack immutability)
 ok( $app->{attr2} == 2, "app has attr2 = 2" );
 
 lives_ok { $app->run(); } "app runs ok";
