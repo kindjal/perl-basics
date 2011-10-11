@@ -13,7 +13,7 @@ sub new {
         attr1 => 1,
         attr2 => 2,
     };
-    bless $self,$class;
+    bless $self, $class;
     return $self;
 }
 

@@ -16,7 +16,7 @@ I am hoping that these files will provide a good framework for producing perl ap
 =head1 Examples
 
  * ./bin/application.pl  A simple application that makes use of a separate Application.pm module and class.
- * ./bin/simple.pl       A self-containe script that still makes use of object-oriented style.
+ * ./bin/simple.pl       A self-contained script that still makes use of object-oriented style.
 
 =head1 The Perl Interpreter
 
