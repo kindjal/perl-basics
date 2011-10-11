@@ -20,6 +20,8 @@ use Test::Output;
 # Tests like lives_ok, etc, see "man Test::Exception"
 use Test::Exception;
 
+use Application;
+
 my $app = Application->new();
 
 ok( $app->{attr1} == 1, "app has attr1 = 1" );
